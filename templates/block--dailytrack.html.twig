@@ -1,0 +1,21 @@
+{# templates/block--display-track.html.twig #}
+
+<div class="daily-track">
+  <h3>Daily Track for <strong>{{ display_date }}</strong></h3>
+
+  <div class="inner">
+    <h5><strong>{{ track_name }}</strong></h5>
+
+    <div class="audiofield">
+      <div class="audiofield-player">
+        <audio id="audiofield-audio-player-{{ track_id }}" preload="none" controls>
+          <source src="{{ track_url }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <label for="audiofield-audio-player-{{ track_id }}">{{ track_description }}</label>
+      </div>
+    </div>
+
+    <h6>from <strong>{{ track_album }}</strong></h6>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "daily_track",
+  "description": "Display a Drupal block that has an audio player with a randomly selected track, changing daily.",
+  "type": "drupal-custom-module",
+  "license": "MIT",
+  "homepage": "https://github.com/michaelchadwick/muzcom-daily-track",
+  "repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    },
+    {
+        "type": "vcs",
+        "url": "git@github.com:michaelchadwick/muzcom-daily-track.git"
+    }
+  ]
+}

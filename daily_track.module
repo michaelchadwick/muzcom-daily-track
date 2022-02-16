@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains daily_track.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function daily_track_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the daily_track module.
+    case 'help.page.daily_track':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Displays random track in a Drupal Block, changing daily.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments.
+ */
+function daily_track_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'daily_track/main';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function daily_track_theme() {
+  $today = date('F j, Y');
+
+  return [
+    'daily_track' => array(
+      'variables' => array(
+        'display_date' => $today,
+        'track_name' => NULL,
+        'track_id' => NULL,
+        'track_album' => NULL,
+        'track_url' => NULL,
+        'track_description' => NULL,
+      ),
+      'template' => 'block--dailytrack'
+    )
+  ];
+}

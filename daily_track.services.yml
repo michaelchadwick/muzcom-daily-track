@@ -1,0 +1,8 @@
+services:
+  # Custom cache bin.
+  cache.daily_track:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin, default_backend: cache.backend.permanent_database }
+    factory: cache_factory:get
+    arguments: [daily_track]

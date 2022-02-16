@@ -1,0 +1,21 @@
+.daily-track {
+  background: rgb(212, 212, 212);
+  border: 5px solid #999;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+  .daily-track h3 {
+    background: #999;
+    font-weight: 1000;
+    margin-top: 0;
+    padding: 10px;
+  }
+  .daily-track .inner {
+    padding: 0 10px;
+  }
+    .daily-track .inner .audiofield {
+      margin-bottom: 0;
+    }
+    .daily-track .inner h6 {
+      margin-top: 0;
+    }
