@@ -1,5 +1,5 @@
 {
-  "name": "daily_track",
+  "name": "michaelchadwick/muzcom-daily-track",
   "description": "Display a Drupal block that has an audio player with a randomly selected track, changing daily.",
   "type": "drupal-custom-module",
   "license": "MIT",
