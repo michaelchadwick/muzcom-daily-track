@@ -8,3 +8,4 @@ dependencies:
   - drupal:block
   - drupal:node
   - drupal:audiofield
+  - drupal:pcb
